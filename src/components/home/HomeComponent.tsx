@@ -1,17 +1,13 @@
 import { Container, Grid, makeStyles, Paper } from '@material-ui/core';
 import React from 'react';
 import CourseComponent from '../courses/CourseComponent';
-import Image from 'react-bootstrap/Image'
-import { Col, Row } from 'react-bootstrap';
+import './homeComponent.sass';
 const HomeComponent = () => {
 
     const useStyles = makeStyles({
         containerPers: {
             marginTop: "2rem",
         },
-        divStart: {
-            backgroundColor: "#f1f1a1",
-        }
     });
     const classes = useStyles();
 
@@ -20,10 +16,21 @@ const HomeComponent = () => {
 
 
         <Container>
-            <div className={classes.divStart}>
-            <Image src="https://image.freepik.com/vector-gratis/aula-vacia-interior-escuela-o-clase-universitaria_107791-631.jpg" fluid />
-            </div>
-            <h2 className={classes.containerPers}>Top Cursos</h2>
+            <Grid container spacing={3}>
+                <Grid item xs={6}>
+                    <div className="divPersonalizado" />
+                </Grid>
+                <Grid item xs={6}>
+                    <Grid
+                        container
+                        direction="row"
+                        justify="center"
+                        alignItems="center"
+                    >
+                    <Container><h2>Perseo, because everybody deserves a good chance</h2></Container>
+                    </Grid>
+                </Grid>
+            </Grid>
             <Grid
                 container
                 direction="row"
