@@ -1,4 +1,4 @@
-import { Container, Grid, makeStyles, Paper } from '@material-ui/core';
+import { Container, Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
 import CourseComponent from '../courses/CourseComponent';
 import './homeComponent.sass';
@@ -8,29 +8,28 @@ const HomeComponent = () => {
         containerPers: {
             marginTop: "2rem",
         },
+        containerText: {
+            marginTop: "5rem",
+            textAlign: "center",
+            color: "white",
+        },
+        gridBackground: {
+        }
     });
     const classes = useStyles();
 
     return (
-
-
-
         <Container>
-            <Grid container spacing={3}>
-                <Grid item xs={6}>
-                    <div className="divPersonalizado" />
-                </Grid>
-                <Grid item xs={6}>
-                    <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                    >
-                    <Container><h2>Perseo, because everybody deserves a good chance</h2></Container>
-                    </Grid>
-                </Grid>
+            <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="center">
+                <div className="divPersonalizado">
+                    <Container className={classes.containerText}><h2>PerseoApp</h2><h5>We help you with your career</h5></Container>
+                </div>
             </Grid>
+
             <Grid
                 container
                 direction="row"
@@ -42,7 +41,7 @@ const HomeComponent = () => {
                 <CourseComponent />
                 <CourseComponent />
                 <CourseComponent />
-                <CourseComponent />
+
 
             </Grid>
 

@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import  HomeComponent from '../components/home/HomeComponent';
 import NavComponent from '../components/navbar/NavBarComponent';
-
+import FooterComponent from '../components/footer/FooterComponent';
 const MainComponent = () => {
     return (
         <BrowserRouter>
@@ -15,6 +15,8 @@ const MainComponent = () => {
                     <Route path='/home'
                         component={ HomeComponent } />
                 </Switch>
+                <FooterComponent />
+
             </div>
         </BrowserRouter>
     );
