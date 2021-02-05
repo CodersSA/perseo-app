@@ -15,7 +15,7 @@ const RightMenu = () => {
     return (
         <Container>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                <BsFillPersonFill/>Illya G.
+                <label style={{color: "white"}}><BsFillPersonFill style={{color: "white"}}/>Illya G.</label>
             </Button>
             <Menu
                 id="simple-menu"
